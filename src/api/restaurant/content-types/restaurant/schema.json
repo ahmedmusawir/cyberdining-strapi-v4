@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "singularName": "restaurant",
+    "pluralName": "restaurants",
+    "displayName": "Restaurant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "bannerImage": {
+      "type": "string",
+      "required": true
+    },
+    "openTime": {
+      "type": "string",
+      "required": true
+    },
+    "closeTime": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "price": {
+      "type": "enumeration",
+      "enum": [
+        "CHEAP",
+        "REGULAR",
+        "EXPENSIVE"
+      ],
+      "required": true,
+      "default": "REGULAR"
+    },
+    "photos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "restaurant-related.photos"
+    },
+    "menuItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "restaurant-related.menu-item"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::location.location",
+      "inversedBy": "restaurants"
+    },
+    "cuisines": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cuisine.cuisine",
+      "mappedBy": "restaurants"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::restaurant.restaurant",
+      "mappedBy": "location"
+    }
+  }
+}

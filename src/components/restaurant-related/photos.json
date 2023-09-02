@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_restaurant_related_photos",
+  "info": {
+    "displayName": "photos"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  }
+}

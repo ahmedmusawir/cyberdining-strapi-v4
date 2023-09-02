@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_restaurant_related_menu_items",
+  "info": {
+    "displayName": "menuItem"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

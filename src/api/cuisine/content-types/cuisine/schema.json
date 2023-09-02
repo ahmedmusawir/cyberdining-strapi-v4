@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuisines",
+  "info": {
+    "singularName": "cuisine",
+    "pluralName": "cuisines",
+    "displayName": "Cuisine"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "cuisines"
+    }
+  }
+}
